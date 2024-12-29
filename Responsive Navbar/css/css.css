@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+@media (min-width: 801px) {
+
+    
+    .main {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 80px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.347);
+        align-items: center;
+    }
+
+    .list {
+        padding: 0px 60px;
+    }
+
+
+     li {
+        list-style: none;
+        letter-spacing: 5px;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    
+    li:hover {
+        font-weight: bold;
+    }
+    
+    .ul2 {
+        display: flex;
+        gap: 20px;
+    }
+
+    ul li svg {
+        width: 20px;
+        height: 20px;
+        fill: rgb(54, 141, 240);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    ul li svg:hover {
+        fill: rgb(54, 141, 240, 0.7);
+    }
+
+    .brand {
+        font-size: 42px;
+        letter-spacing: 10px;
+    }
+
+    .toggle-button {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+        width: 100px;
+        height: 50px;
+        fill: rgb(0, 119, 255);
+        cursor: pointer;
+        transition: fill 0.3s ease, transform 0.3s ease;
+    }
+
+    .hamburger:hover {
+        fill: rgba(0, 119, 255, 0.7);
+    }
+
+    .list {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+
+    .main {
+        width: 100%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.347);
+    }
+
+    .list {
+        flex-direction: column;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+    }
+
+    .list.show {
+        opacity: 1;
+        max-height: 200px; 
+    }
+
+
+    .list li {
+        padding: 10px 20px;
+    }
+
+    .list li:hover {
+        background-color: rgba(54, 141, 240, 0.315);
+    }
+    
+    .head {
+        display: flex;
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    .ul2 li {
+        display: none;
+    }
+
+    .list li {
+        list-style: none;
+        letter-spacing: 5px;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    
+    .list li:hover {
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .ul2 li svg {
+        width: 20px;
+        height: 20px;
+        fill: rgb(54, 141, 240);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .ul2 li svg:hover {
+        fill: rgb(54, 141, 240, 0.7);
+    }
+
+    .brand {
+        font-size: 42px;
+        letter-spacing: 10px;
+    }
+
+    .toggle-button {
+        display: visible;
+        background-color: transparent;
+        border: none;
+        width: auto;
+        height: auto;
+    }
+
+    .hamburger {
+        fill: rgb(0, 119, 255);
+        cursor: pointer;
+        transition: fill 0.3s ease, transform 0.3s ease;
+    }
+
+    .hamburger:hover {
+        fill: rgba(0, 119, 255, 0.7);
+    }
+}
+
+
